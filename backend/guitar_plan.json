@@ -1,0 +1,412 @@
+{
+  "weeklyMilestones": [
+    {
+      "week": 1,
+      "goal": "Learn basic guitar parts and tuning."
+    },
+    {
+      "week": 2,
+      "goal": "Master basic chords and strumming patterns."
+    },
+    {
+      "week": 3,
+      "goal": "Play simple songs using learned chords."
+    },
+    {
+      "week": 4,
+      "goal": "Develop fingerpicking technique and learn a new song."
+    }
+  ],
+  "days": [
+    {
+      "day": 1,
+      "tasks": [
+        {
+          "title": "Guitar Anatomy",
+          "instruction": "Learn the parts of the guitar and their functions."
+        },
+        {
+          "title": "Tuning the Guitar",
+          "instruction": "Use a tuner to tune your guitar to standard EADGBE."
+        }
+      ]
+    },
+    {
+      "day": 2,
+      "tasks": [
+        {
+          "title": "Holding the Guitar",
+          "instruction": "Practice holding the guitar correctly while sitting and standing."
+        },
+        {
+          "title": "Basic Finger Placement",
+          "instruction": "Learn how to place your fingers on the fretboard."
+        }
+      ]
+    },
+    {
+      "day": 3,
+      "tasks": [
+        {
+          "title": "Open Chords Introduction",
+          "instruction": "Learn the E minor and E major chords."
+        },
+        {
+          "title": "Strumming Basics",
+          "instruction": "Practice downstrokes on open strings."
+        }
+      ]
+    },
+    {
+      "day": 4,
+      "tasks": [
+        {
+          "title": "More Open Chords",
+          "instruction": "Learn A major and D major chords."
+        },
+        {
+          "title": "Strumming Patterns",
+          "instruction": "Practice a simple down-up strumming pattern."
+        }
+      ]
+    },
+    {
+      "day": 5,
+      "tasks": [
+        {
+          "title": "Chord Transitions",
+          "instruction": "Practice switching between E minor, E major, A major, and D major."
+        },
+        {
+          "title": "Strumming Practice",
+          "instruction": "Continue practicing your strumming pattern with chord transitions."
+        }
+      ]
+    },
+    {
+      "day": 6,
+      "tasks": [
+        {
+          "title": "Learn G Major Chord",
+          "instruction": "Add the G major chord to your repertoire."
+        },
+        {
+          "title": "Strumming with G Major",
+          "instruction": "Practice strumming with G major included."
+        }
+      ]
+    },
+    {
+      "day": 7,
+      "tasks": [
+        {
+          "title": "Review Chords",
+          "instruction": "Review all chords learned so far."
+        },
+        {
+          "title": "Play Along",
+          "instruction": "Find a simple song that uses the chords you've learned and play along."
+        }
+      ]
+    },
+    {
+      "day": 8,
+      "tasks": [
+        {
+          "title": "Learn C Major Chord",
+          "instruction": "Add the C major chord to your practice."
+        },
+        {
+          "title": "Strumming Practice",
+          "instruction": "Practice strumming with C major included."
+        }
+      ]
+    },
+    {
+      "day": 9,
+      "tasks": [
+        {
+          "title": "Chord Progressions",
+          "instruction": "Practice common chord progressions using E, A, D, G, and C."
+        },
+        {
+          "title": "Strumming Variations",
+          "instruction": "Experiment with different strumming patterns."
+        }
+      ]
+    },
+    {
+      "day": 10,
+      "tasks": [
+        {
+          "title": "Learn F Major Chord",
+          "instruction": "Introduce the F major chord into your practice."
+        },
+        {
+          "title": "Strumming with F Major",
+          "instruction": "Practice strumming with F major included."
+        }
+      ]
+    },
+    {
+      "day": 11,
+      "tasks": [
+        {
+          "title": "Practice Chord Transitions",
+          "instruction": "Focus on transitioning between all chords smoothly."
+        },
+        {
+          "title": "Play a Simple Song",
+          "instruction": "Choose a song that uses the chords you've learned and practice it."
+        }
+      ]
+    },
+    {
+      "day": 12,
+      "tasks": [
+        {
+          "title": "Learn a New Song",
+          "instruction": "Pick another simple song and learn it using the chords you know."
+        },
+        {
+          "title": "Strumming Practice",
+          "instruction": "Practice strumming along with the new song."
+        }
+      ]
+    },
+    {
+      "day": 13,
+      "tasks": [
+        {
+          "title": "Introduction to Fingerpicking",
+          "instruction": "Learn basic fingerpicking patterns."
+        },
+        {
+          "title": "Practice Fingerpicking",
+          "instruction": "Practice fingerpicking on open strings."
+        }
+      ]
+    },
+    {
+      "day": 14,
+      "tasks": [
+        {
+          "title": "Fingerpicking with Chords",
+          "instruction": "Practice fingerpicking while playing E minor and E major."
+        },
+        {
+          "title": "Combine Techniques",
+          "instruction": "Try combining strumming and fingerpicking in your practice."
+        }
+      ]
+    },
+    {
+      "day": 15,
+      "tasks": [
+        {
+          "title": "Learn a New Fingerpicking Pattern",
+          "instruction": "Introduce a new fingerpicking pattern."
+        },
+        {
+          "title": "Practice with Chords",
+          "instruction": "Practice the new pattern with chords you've learned."
+        }
+      ]
+    },
+    {
+      "day": 16,
+      "tasks": [
+        {
+          "title": "Learn a New Song with Fingerpicking",
+          "instruction": "Choose a simple song that uses fingerpicking."
+        },
+        {
+          "title": "Play Along",
+          "instruction": "Practice playing along with the song."
+        }
+      ]
+    },
+    {
+      "day": 17,
+      "tasks": [
+        {
+          "title": "Review All Techniques",
+          "instruction": "Review strumming and fingerpicking techniques."
+        },
+        {
+          "title": "Play a Song",
+          "instruction": "Choose a song that incorporates both techniques and practice it."
+        }
+      ]
+    },
+    {
+      "day": 18,
+      "tasks": [
+        {
+          "title": "Learn Barre Chords",
+          "instruction": "Start learning the concept of barre chords."
+        },
+        {
+          "title": "Practice F Major Barre",
+          "instruction": "Practice playing the F major chord as a barre chord."
+        }
+      ]
+    },
+    {
+      "day": 19,
+      "tasks": [
+        {
+          "title": "Practice Barre Chord Transitions",
+          "instruction": "Practice transitioning between barre chords and open chords."
+        },
+        {
+          "title": "Learn a Song with Barre Chords",
+          "instruction": "Choose a song that uses barre chords and practice it."
+        }
+      ]
+    },
+    {
+      "day": 20,
+      "tasks": [
+        {
+          "title": "Learn a New Song",
+          "instruction": "Pick a song that incorporates both open and barre chords."
+        },
+        {
+          "title": "Play Along",
+          "instruction": "Practice playing along with the song."
+        }
+      ]
+    },
+    {
+      "day": 21,
+      "tasks": [
+        {
+          "title": "Review Songs Learned",
+          "instruction": "Go through all songs you've learned and play them."
+        },
+        {
+          "title": "Focus on Weak Areas",
+          "instruction": "Identify and practice areas where you struggle."
+        }
+      ]
+    },
+    {
+      "day": 22,
+      "tasks": [
+        {
+          "title": "Learn a New Technique",
+          "instruction": "Explore hammer-ons and pull-offs."
+        },
+        {
+          "title": "Practice Technique",
+          "instruction": "Incorporate hammer-ons and pull-offs into your practice."
+        }
+      ]
+    },
+    {
+      "day": 23,
+      "tasks": [
+        {
+          "title": "Learn a New Song with Techniques",
+          "instruction": "Choose a song that uses hammer-ons and pull-offs."
+        },
+        {
+          "title": "Play Along",
+          "instruction": "Practice playing along with the song."
+        }
+      ]
+    },
+    {
+      "day": 24,
+      "tasks": [
+        {
+          "title": "Review Fingerpicking Patterns",
+          "instruction": "Go through all fingerpicking patterns learned."
+        },
+        {
+          "title": "Combine Patterns",
+          "instruction": "Experiment with combining different fingerpicking patterns."
+        }
+      ]
+    },
+    {
+      "day": 25,
+      "tasks": [
+        {
+          "title": "Learn a New Song with Fingerpicking",
+          "instruction": "Choose a more complex song that uses fingerpicking."
+        },
+        {
+          "title": "Play Along",
+          "instruction": "Practice playing along with the song."
+        }
+      ]
+    },
+    {
+      "day": 26,
+      "tasks": [
+        {
+          "title": "Explore New Genres",
+          "instruction": "Listen to different genres and pick a style you want to learn."
+        },
+        {
+          "title": "Practice Style",
+          "instruction": "Start practicing techniques from the chosen genre."
+        }
+      ]
+    },
+    {
+      "day": 27,
+      "tasks": [
+        {
+          "title": "Learn a New Song in Chosen Genre",
+          "instruction": "Pick a song from the genre you chose and learn it."
+        },
+        {
+          "title": "Play Along",
+          "instruction": "Practice playing along with the song."
+        }
+      ]
+    },
+    {
+      "day": 28,
+      "tasks": [
+        {
+          "title": "Review All Techniques",
+          "instruction": "Review all techniques learned throughout the month."
+        },
+        {
+          "title": "Play a Medley",
+          "instruction": "Create a medley of songs you've learned."
+        }
+      ]
+    },
+    {
+      "day": 29,
+      "tasks": [
+        {
+          "title": "Record Yourself",
+          "instruction": "Record yourself playing a song or medley."
+        },
+        {
+          "title": "Self-Review",
+          "instruction": "Listen to your recording and note areas for improvement."
+        }
+      ]
+    },
+    {
+      "day": 30,
+      "tasks": [
+        {
+          "title": "Set Future Goals",
+          "instruction": "Reflect on your progress and set new goals for the next month."
+        },
+        {
+          "title": "Celebrate Your Progress",
+          "instruction": "Play your favorite song and enjoy your progress!"
+        }
+      ]
+    }
+  ]
+}
