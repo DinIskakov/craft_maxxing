@@ -9,6 +9,7 @@ const steps = [
   { icon: ListChecks, label: "Creating daily tasks" },
 ]
 
+// eslint-disable-next-line no-unused-vars
 function generateMockPlan(skillName) {
   const milestones = [
     { week: 1, goal: "Foundation & Basics" },
@@ -54,6 +55,7 @@ export default function LoadingPage() {
   const { activeSkill, setPlanForSkill } = useSkill()
   const [currentStep, setCurrentStep] = useState(0)
   const [completed, setCompleted] = useState([false, false, false])
+  const [error, setError] = useState("")
 
   useEffect(() => {
     if (!activeSkill) {
@@ -78,12 +80,48 @@ export default function LoadingPage() {
       }, totalDelay)
     })
 
-    // Generate plan and redirect
-    setTimeout(() => {
-      const plan = generateMockPlan(activeSkill)
-      setPlanForSkill(activeSkill, plan)
-      navigate("/plan/overview")
-    }, totalDelay + 600)
+    const minEndTime = Date.now() + totalDelay + 600
+
+    const run = async () => {
+      try {
+        const res = await fetch("/api/learning-plan", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ skill_name: activeSkill }),
+        })
+
+        if (!res.ok) {
+          throw new Error(`Failed to generate plan (${res.status})`)
+        }
+
+        const rawPlan = await res.json()
+        const plan = {
+          ...rawPlan,
+          skillName: activeSkill,
+          currentDay: 1,
+          days: rawPlan.days.map((day) => ({
+            ...day,
+            completed: false,
+            tasks: day.tasks.map((task, idx) => ({
+              ...task,
+              id: `day-${day.day}-task-${idx + 1}`,
+              completed: false,
+            })),
+          })),
+        }
+
+        setPlanForSkill(activeSkill, plan)
+        const remaining = minEndTime - Date.now()
+        if (remaining > 0) {
+          await new Promise((resolve) => setTimeout(resolve, remaining))
+        }
+        navigate("/plan/overview")
+      } catch (err) {
+        setError(err instanceof Error ? err.message : "Failed to generate plan")
+      }
+    }
+
+    run()
   }, [activeSkill, navigate, setPlanForSkill])
 
   return (
@@ -161,6 +199,10 @@ export default function LoadingPage() {
             ))}
           </div>
         </div>
+
+        {error && (
+          <p className="mt-8 text-sm text-red-500">{error}</p>
+        )}
       </div>
     </main>
   )

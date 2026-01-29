@@ -1,4 +1,3 @@
-import React from "react"
 import { Link } from "react-router-dom"
 import { X, Play, Sparkles } from "lucide-react"
 import { cn } from "@/lib/utils.js"
@@ -96,8 +95,20 @@ export function SkillBubble({
   }
 
   return (
-    <button type="button" onClick={onClick} style={style} className="absolute">
+    <div
+      role="button"
+      tabIndex={0}
+      onClick={onClick}
+      onKeyDown={(e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault()
+          onClick?.()
+        }
+      }}
+      style={style}
+      className="absolute"
+    >
       {bubbleContent}
-    </button>
+    </div>
   )
 }
