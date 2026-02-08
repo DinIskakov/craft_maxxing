@@ -1,9 +1,13 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from routers import agent
+from routers import agent, profiles, challenges, friends, notifications
 
-app = FastAPI()
+app = FastAPI(
+    title="CraftMaxxing API",
+    description="Learn any skill in 30 days with multiplayer challenges",
+    version="1.0.0",
+)
 
 app.add_middleware(
     CORSMiddleware,
@@ -13,12 +17,22 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+# Include routers
 app.include_router(agent.router)
+app.include_router(profiles.router)
+app.include_router(challenges.router)
+app.include_router(friends.router)
+app.include_router(notifications.router)
 
 
 @app.get("/")
 def read_root() -> dict:
-    return {"status": "ok"}
+    return {"status": "ok", "message": "CraftMaxxing API is running"}
+
+
+@app.get("/health")
+def health_check() -> dict:
+    return {"status": "healthy"}
 
 
 if __name__ == "__main__":

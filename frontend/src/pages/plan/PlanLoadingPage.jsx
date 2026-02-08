@@ -115,7 +115,7 @@ export default function LoadingPage() {
         if (remaining > 0) {
           await new Promise((resolve) => setTimeout(resolve, remaining))
         }
-        navigate("/plan/overview")
+        navigate("/plan/today")
       } catch (err) {
         setError(err instanceof Error ? err.message : "Failed to generate plan")
       }

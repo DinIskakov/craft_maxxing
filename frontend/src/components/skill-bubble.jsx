@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { X, Play, Sparkles } from "lucide-react"
 import { cn } from "@/lib/utils.js"
 
@@ -18,10 +18,12 @@ export function SkillBubble({
   isActive = false,
   isCenter = false,
   hasPlan = false,
+  opponent = null,
   onClick,
   onRemove,
   style,
 }) {
+  const navigate = useNavigate()
   const colorSet = bubbleColors[index % bubbleColors.length]
 
   if (isCenter) {
@@ -38,6 +40,14 @@ export function SkillBubble({
         </div>
       </div>
     )
+  }
+
+  const handleOpponentClick = (e) => {
+    e.preventDefault()
+    e.stopPropagation()
+    if (opponent?.username) {
+      navigate(`/friends/${opponent.username}`)
+    }
   }
 
   const bubbleContent = (
@@ -65,7 +75,20 @@ export function SkillBubble({
       {/* Shine effect */}
       <div className="absolute inset-0 rounded-full bg-gradient-to-t from-transparent via-white/10 to-white/20 pointer-events-none" />
       
-      {onRemove && (
+      {/* Opponent avatar (for challenge skills) */}
+      {opponent && (
+        <button
+          type="button"
+          onClick={handleOpponentClick}
+          className="absolute -top-2 -right-2 w-7 h-7 rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white text-[10px] font-bold ring-2 ring-white shadow-md hover:scale-110 transition-transform z-10"
+          title={`vs @${opponent.username}`}
+        >
+          {opponent.username?.[0]?.toUpperCase() || '?'}
+        </button>
+      )}
+
+      {/* Remove button (only for non-challenge skills) */}
+      {onRemove && !opponent && (
         <button
           type="button"
           onClick={(e) => {

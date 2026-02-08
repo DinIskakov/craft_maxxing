@@ -2,7 +2,6 @@ import { useEffect } from "react"
 import { useNavigate } from "react-router-dom"
 import { useSkill } from "@/lib/skill-context.jsx"
 import { Trophy, TrendingUp, Target, ArrowRight } from "lucide-react"
-import { PlanNavigation } from "@/components/plan-navigation.jsx"
 
 export default function ProgressPage() {
   const navigate = useNavigate()
@@ -141,7 +140,6 @@ export default function ProgressPage() {
         )}
       </div>
 
-      <PlanNavigation currentPage="progress" />
     </main>
   )
 }

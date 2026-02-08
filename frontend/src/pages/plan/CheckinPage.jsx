@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { useSkill } from "@/lib/skill-context.jsx"
+import { challengeApi } from "@/lib/api.js"
 import { Smile, Meh, Frown, Sparkles } from "lucide-react"
 import { cn } from "@/lib/utils.js"
 import { Suspense } from "react"
@@ -14,10 +15,12 @@ const feedbackOptions = [
 
 export default function CheckinPage() {
   const navigate = useNavigate()
-  const { getActivePlan, submitFeedback, completeDay } = useSkill()
+  const { getActivePlan, submitFeedback, completeDay, getChallengeForSkill, activeSkill } = useSkill()
   const plan = getActivePlan()
   const [selected, setSelected] = useState(null)
   const [isUpdating, setIsUpdating] = useState(false)
+
+  const challengeInfo = activeSkill ? getChallengeForSkill(activeSkill) : null
 
   useEffect(() => {
     if (!plan) {
@@ -34,15 +37,29 @@ export default function CheckinPage() {
 
     setIsUpdating(true)
 
-    // Simulate AI updating the plan
-    await new Promise((resolve) => setTimeout(resolve, 1500))
+    // If this skill is from a challenge, also sync with backend
+    if (challengeInfo?.challengeId) {
+      try {
+        await challengeApi.dailyCheckin(
+          challengeInfo.challengeId,
+          true,
+          `Feedback: ${selected}`
+        )
+      } catch (err) {
+        console.error("Failed to sync challenge checkin:", err)
+        // Continue with local update even if backend fails
+      }
+    } else {
+      // Simulate AI updating the plan for non-challenge skills
+      await new Promise((resolve) => setTimeout(resolve, 1500))
+    }
 
     submitFeedback(currentDayIndex, selected)
     completeDay()
 
     // Check if we completed day 30
     if (plan.currentDay >= 30) {
-      navigate("/plan/progress")
+      navigate("/profile")
     } else {
       navigate("/plan/today")
     }
@@ -59,7 +76,7 @@ export default function CheckinPage() {
                   How did today feel?
                 </h1>
                 <p className="text-muted-foreground mb-10">
-                  Your feedback helps us adjust tomorrow's plan
+                  Your feedback helps us adjust tomorrow&apos;s plan
                 </p>
               </div>
 
@@ -121,10 +138,12 @@ export default function CheckinPage() {
                 <Sparkles className="w-8 h-8 text-primary animate-pulse" />
               </div>
               <h2 className="font-serif text-2xl text-foreground mb-2">
-                Adjusting your plan
+                {challengeInfo ? "Syncing progress" : "Adjusting your plan"}
               </h2>
               <p className="text-muted-foreground">
-                Making tomorrow just right for you...
+                {challengeInfo
+                  ? "Recording your check-in and updating your challenge..."
+                  : "Making tomorrow just right for you..."}
               </p>
             </div>
           )}

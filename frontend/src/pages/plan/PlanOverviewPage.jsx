@@ -2,7 +2,6 @@ import { useEffect } from "react"
 import { useNavigate } from "react-router-dom"
 import { useSkill } from "@/lib/skill-context.jsx"
 import { ArrowRight, Target } from "lucide-react"
-import { PlanNavigation } from "@/components/plan-navigation.jsx"
 
 export default function PlanOverviewPage() {
   const navigate = useNavigate()
@@ -130,7 +129,6 @@ export default function PlanOverviewPage() {
         </button>
       </div>
 
-      <PlanNavigation currentPage="plan" />
     </main>
   )
 }
