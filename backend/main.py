@@ -1,10 +1,14 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from opik import configure as configure_opik
 
 from routers import agent, profiles, challenges, friends, notifications
 
+# Configure Opik for LLM observability/tracing
+configure_opik()
+
 app = FastAPI(
-    title="CraftMaxxing API",
+    title="SkillMaxxing API",
     description="Learn any skill in 30 days with multiplayer challenges",
     version="1.0.0",
 )
@@ -27,7 +31,7 @@ app.include_router(notifications.router)
 
 @app.get("/")
 def read_root() -> dict:
-    return {"status": "ok", "message": "CraftMaxxing API is running"}
+    return {"status": "ok", "message": "SkillMaxxing API is running"}
 
 
 @app.get("/health")

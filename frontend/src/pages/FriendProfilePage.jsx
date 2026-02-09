@@ -99,9 +99,9 @@ export default function FriendProfilePage() {
     const handleShareLink = () => {
         if (!challengeLink) return
         const fullLink = `${window.location.origin}/challenges/join/${challengeLink.code}`
-        const text = `I challenge you on CraftMaxxing! Learn ${linkForm.skill} with me.`
+        const text = `I challenge you on SkillMaxxing! Learn ${linkForm.skill} with me.`
         if (navigator.share) {
-            navigator.share({ title: 'CraftMaxxing Challenge', text, url: fullLink })
+            navigator.share({ title: 'SkillMaxxing Challenge', text, url: fullLink })
         } else {
             handleCopyLink()
         }

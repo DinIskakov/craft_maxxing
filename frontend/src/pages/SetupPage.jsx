@@ -156,7 +156,7 @@ export default function SetupPage() {
       {/* Header */}
       <header className="flex items-center justify-between p-4">
         <h1 className="text-lg font-serif text-stone-900 pl-2">
-          {user ? "Your Skills" : "CraftMaxxing"}
+          {user ? "Your Skills" : "SkillMaxxing"}
         </h1>
         <div className="flex items-center gap-2">
           {user && <NotificationBell />}

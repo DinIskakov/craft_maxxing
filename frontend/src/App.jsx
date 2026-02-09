@@ -18,6 +18,7 @@ import JoinChallengePage from "./pages/JoinChallengePage.jsx"
 import DiscoverPage from "./pages/DiscoverPage.jsx"
 import PlanLoadingPage from "./pages/plan/PlanLoadingPage.jsx"
 import TodayPage from "./pages/plan/TodayPage.jsx"
+import PlanCalendarPage from "./pages/plan/PlanCalendarPage.jsx"
 import CheckinPage from "./pages/plan/CheckinPage.jsx"
 
 /** Wrap a page with ProtectedRoute + ProfileRequired + AppLayout (bottom nav) */
@@ -66,10 +67,11 @@ function App() {
             {/* Plan flow pages (part of skill learning, not tabs) */}
             <Route path="/plan/loading" element={<AuthPage><PlanLoadingPage /></AuthPage>} />
             <Route path="/plan/today" element={<AuthPage><TodayPage /></AuthPage>} />
+            <Route path="/plan/calendar" element={<AuthPage><PlanCalendarPage /></AuthPage>} />
             <Route path="/plan/checkin" element={<AuthPage><CheckinPage /></AuthPage>} />
 
             {/* Redirect old plan routes */}
-            <Route path="/plan/overview" element={<Navigate to="/discover" replace />} />
+            <Route path="/plan/overview" element={<Navigate to="/plan/calendar" replace />} />
             <Route path="/plan/progress" element={<Navigate to="/discover" replace />} />
 
             {/* Catch all */}

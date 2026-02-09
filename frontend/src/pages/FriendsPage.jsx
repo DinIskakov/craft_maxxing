@@ -132,9 +132,9 @@ export default function FriendsPage() {
 
     const handleShareInvite = () => {
         const link = `${window.location.origin}/signup?ref=friend`
-        const text = `Join me on CraftMaxxing - learn any skill in 30 days with challenges!`
+        const text = `Join me on SkillMaxxing - learn any skill in 30 days with challenges!`
         if (navigator.share) {
-            navigator.share({ title: 'Join CraftMaxxing', text, url: link })
+            navigator.share({ title: 'Join SkillMaxxing', text, url: link })
         } else {
             handleCopyInviteLink()
         }
@@ -405,7 +405,7 @@ export default function FriendsPage() {
                 <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">
                     <div className="bg-white rounded-2xl w-full max-w-sm shadow-xl">
                         <div className="flex items-center justify-between p-4 border-b border-stone-100">
-                            <h3 className="font-semibold text-stone-900">Invite Friends to CraftMaxxing</h3>
+                            <h3 className="font-semibold text-stone-900">Invite Friends to SkillMaxxing</h3>
                             <button
                                 onClick={() => setShowInviteModal(false)}
                                 className="p-1.5 hover:bg-stone-100 rounded-full transition-colors"
@@ -415,7 +415,7 @@ export default function FriendsPage() {
                         </div>
                         <div className="p-5 space-y-4">
                             <p className="text-sm text-stone-600">
-                                Share this link with friends so they can join CraftMaxxing and compete with you!
+                                Share this link with friends so they can join SkillMaxxing and compete with you!
                             </p>
                             <div className="flex items-center gap-2 bg-stone-50 rounded-xl p-3 border border-stone-200">
                                 <p className="text-sm text-stone-700 truncate flex-1">

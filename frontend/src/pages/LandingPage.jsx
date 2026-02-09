@@ -37,7 +37,7 @@ export default function LandingPage() {
 
       <div className="max-w-2xl mx-auto text-center animate-in fade-in duration-1000">
         <h1 className="font-serif text-5xl md:text-7xl tracking-tight text-foreground mb-6 text-balance">
-          CraftMaxxing
+          SkillMaxxing
         </h1>
         <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-16 max-w-md mx-auto text-pretty">
           Master any skill in 30 days with personalized daily tasks designed just for you.

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { Navigate, useNavigate } from "react-router-dom"
 import { useSkill } from "@/lib/skill-context.jsx"
-import { Check, ChevronRight, AlertCircle, Swords, Flag } from "lucide-react"
+import { Check, ChevronRight, AlertCircle, Swords, Flag, CalendarDays } from "lucide-react"
 import { cn } from "@/lib/utils.js"
 
 export default function TodayPage() {
@@ -74,6 +74,16 @@ export default function TodayPage() {
               style={{ width: `${(plan.currentDay / 30) * 100}%` }}
             />
           </div>
+
+          {/* View Calendar link */}
+          <button
+            type="button"
+            onClick={() => navigate("/plan/calendar")}
+            className="inline-flex items-center gap-1.5 mt-4 text-sm text-muted-foreground hover:text-foreground transition-colors"
+          >
+            <CalendarDays className="w-4 h-4" />
+            View full calendar
+          </button>
         </div>
 
         {/* Task Cards */}

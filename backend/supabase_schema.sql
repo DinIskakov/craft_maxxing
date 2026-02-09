@@ -1,5 +1,5 @@
 -- ============================================
--- CraftMaxxing Database Schema (Simplified)
+-- SkillMaxxing Database Schema (Simplified)
 -- Run this in Supabase SQL Editor
 -- Dashboard → SQL Editor → New Query → Paste & Run
 -- ============================================

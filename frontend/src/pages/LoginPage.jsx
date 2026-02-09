@@ -32,7 +32,7 @@ export default function LoginPage() {
                 {/* Logo */}
                 <div className="text-center mb-8">
                     <Link to="/" className="inline-block">
-                        <h1 className="text-4xl font-serif italic text-stone-900">CraftMaxxing</h1>
+                        <h1 className="text-4xl font-serif italic text-stone-900">SkillMaxxing</h1>
                     </Link>
                     <p className="text-stone-500 mt-2">Welcome back! Sign in to continue.</p>
                 </div>
